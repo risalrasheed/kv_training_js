@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="risal rasheed">
+        <title>KeyValue Employee</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <aside>
+            <nav>
+                <div>
+                    <div id=kvlogodiv>
+                        <img src="kv logo.png" alt="KeyValue" id="kvlogo">
+                    </div>
+                    
+                    <div id="employeelistdiv">
+                        <div id="employeelisticonbg">
+                            <img src="List.png" alt="List" id="imageoflist">
+                        </div>
+                     
+                        <a href="#" id="employeelistlink">Employee List</a>
+                    </div>
+                </div>
+            </nav>
+            
+        </aside>
+        <main>
+            <div id="createemployeediv">
+                <h1>Create Employee</h1>
+            </div>
+            <div id="formdiv">
+                <form id="form1">
+                    <div id="formdetails">
+                        <div class="formpadding">
+                            <label for="employee_name" id="employee_name_lab">Employee Name</label>
+                            <input type="text" id="employee_name" name="employee_name"  placeholder="Employee Name">
+        
+                        </div>
+                        
+                        <div class="formpadding">
+                            <label for="employee_id" id="employee_id_lab">Employee ID</label>
+                            <input type="text" id="employee_id" name="employee_id" placeholder="Employee ID">
+     
+                        </div>
+                        
+                        <div class="formpadding">
+                            <label for="employee_email" id="employee_email_lab">Employee Email</label>
+                            <input type="text" id="employee_email" name="employee_email" placeholder="Employee Email">
+                        </div>
+                        
+                        <div class="formpadding">
+                            <label for="joining_date" id="joining_date_lab">Joining Date</label>
+                            <input type="text" id="joining_date" name="joining_date" placeholder="Joining Date">
+
+                        </div>
+
+                        <div class="formpadding">
+        
+                            <label for="role" id="role_lab">Role</label>
+                            <select name="role" id="role" >
+                                <option value="">Choose Role</option>
+                                <option value="developer">Developer</option>
+                                <option value="qa">QA</option>
+                                <option value="devops">Devops</option>
+                            </select>
+                        </div>
+
+
+                        <div class="formpadding">
+                            <label for="status" id="status_lab">Status</label>
+                            <select name="status" id="status">
+                                <option value="">Status</option>
+                                <option value="active">Active</option>
+                                <option value="on leave">On leave</option>
+                                <option value="intern">Intern</option>
+                                <option value="inactive">Inactive</option>
+                                
+                            </select>
+                        </div>
+                        
+                        <div class="formpadding">
+                            <label for="experience" id="experience_lab">Experience</label>
+                            <input type="text" id="experience" name="experience" placeholder="Experience">
+                        </div>
+
+                        <div class="formpadding">
+                            <label for="address" id="address_lab">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Address">
+                        </div>
+
+                        <div class="formpadding">
+                            <label for="upload_id_proof" id="upload_id_proof_lab">Upload ID Proof</label>
+                            <input type="file" id="upload_id_proof" name="upload_id_proof" >
+                            <div id="choosefilediv">
+                                <div>Choose File</div>
+                                <div id="upload_buttondiv">
+                                    <button id="upload_button" type="button">Browse</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        
+        
+
+                    </div>
+
+                    <div id="formbuttons">
+                        <input type="button" value="Create" id="create_button">
+                        <input type="button" value="Cancel" id="cancel_button">
+                        
+                    </div>
+                    
+    
+    
+    
+                </form>
+            </div>
+        </main>
+        
+        
+    </body>
+    <script>
+        const debounce = (func, delay) => {
+            let debounceTimer
+            return function() {
+                if(debounceTimer) {
+                    clearTimeout(debounceTimer);
+                }
+                
+                debounceTimer= setTimeout(() =>  {
+                    func();
+                },delay);
+            }
+        }
+        var form = document.getElementById('form1');
+            if(form == null) {
+                alert("Error");
+            }
+        document.getElementById("create_button").addEventListener('click',debounce(e => {
+            var email = document.getElementById('employee_email').value;
+        
+
+            var condition = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+                document.getElementById("employee_email").value
+                );
+            if (condition) {
+                const obj = {
+                    "EmployeeName":document.getElementById("employee_name").value,
+                    "EmployeeId":document.getElementById("employee_id").value,
+                    "EmployeeEmail":document.getElementById("employee_email").value,
+                    "JoiningDate":document.getElementById("joining_date").value,
+                    "Role":document.getElementById("role").value,
+                    "Status":document.getElementById("status").value,
+                    "Experience":document.getElementById("experience").value,
+                    "Address":document.getElementById("address").value,
+                }
+                console.log(obj);
+                document.getElementById("create_button").style.background='#808080';
+                alert('Submitting')
+                form.submit();
+                return true;
+            }
+            alert("You have entered an invalid email address!");
+            return false; 
+        },2000) );
+
+    </script>
+</html>

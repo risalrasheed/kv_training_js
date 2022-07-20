@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+aside {
+    height: 100%;
+    position: fixed;
+    width: 300px;
+    left:0;
+    background-color: white;
+    box-shadow: 3px 3px 3px grey;
+
+}
+body {
+    background-color: #ebf4f7;
+}
+div {
+    background-color: white;
+
+}
+input {
+    
+    padding: 20px;
+}
+label {
+    margin-bottom: 5px;;
+}
+input, label {
+    display:block;
+}
+
+form{
+    padding: 20px;
+}
+input {
+    padding: 20px;
+}
+.formpadding {
+    padding: 20px;
+}
+#create_button, #cancel_button {
+
+    margin: 20px;
+    padding-left: 50px;
+    padding-right:50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: large;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#create_button {
+    background-color: #03a5fc;
+    border: 1px #03a5fc;
+    box-shadow: 2px 2px 2px #03a5fc;
+    color: white;
+    
+}
+
+input[type=reset] {
+    border: 1px #f5f3f2;
+    box-sizing: 2px 2px 2px #f5f3f2;
+}
+
+input[type=text], select {
+    width: 350px;
+    height: 20px;
+    background-color: #f5f3f2;
+    /* border-color: #f5f3f2; */
+
+    border-width: 3px;
+    border-color: #d4cfcd;
+    border-radius: 5px;
+    border-style: solid;
+
+}
+input[type=file] {
+    display: none;
+}
+select {
+    height: 50px;
+    border-width: 3px;
+    border-color: #d4cfcd;
+}
+label + input {
+    margin: 0px;
+}
+#kvlogo {
+    width:70%;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    margin-top: 5px;
+}
+#kvlogodiv {
+    align-items: center;
+}
+#createemployeediv {
+    box-shadow: 3px 3px 3px grey;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#formdiv {
+    box-shadow: 3px 3px 3px grey;
+    padding: 20px;
+    border-radius: 10px;
+}
+#formdetails {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+#formbuttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+#createbutton {
+    background-color: skyblue;
+}
+#employeelistdiv {
+    font-size: large;
+    color: white;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    background-color: #03a5fc;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-left: 20px;
+}
+#employeelistlink {
+    color:white;
+    text-decoration: none;
+    margin-left: 10px;
+    
+}
+#employeelisticonbg {
+    background-color: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    margin: 0px;
+    /* justify-content: flex-start; */
+}
+#imageoflist {
+    height: 20px;
+    max-width: 100%;
+}
+#upload_button, #choosefilediv {
+    width: 100px;
+    height: 100%;
+    color: grey;
+    background-color: #f5f3f2;
+    border-color: #d4cfcd;
+    border-width: 3px;
+
+}
+#upload_button {
+    right: 20px;
+}
+#upload_button {
+    margin-left: 140px;
+    border-radius: 5px;
+    height: 40px;
+}
+#cancel_button {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#create_button {
+    border-radius: 5px;
+}
+#choosefilediv {
+    height: 50px;
+    width: 350px;
+    padding-left: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: 3px solid #d4cfcd;
+    
+    
+}
+#upload_buttondiv {
+    background-color: #f5f3f2;
+    height:35px;
+}
+main {
+    
+    margin-left: 300px;
+}
